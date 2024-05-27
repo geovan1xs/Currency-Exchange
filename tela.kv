@@ -1,0 +1,231 @@
+<Gerenciador>
+    Menu:
+        name: 'menu'
+    Inicio:
+        name: 'inicio'
+    Dolar:
+        name: 'Dolar'
+        id: moedausd
+    Euro:
+        name: 'Euro'
+        id: moedaeur
+    Bitcoin:
+        name: 'Bitcoin'
+        id: moedabtc
+    Iene:
+        name: 'Iene'
+        id: moedajpy
+    Libra:
+        name: 'Libra'
+        id: moedagbp
+    Peso:
+        name: 'Peso'
+        id: moedaars
+
+
+
+<Menu>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:50
+        Image:
+            source:'Imagem/vai.jpeg'
+            size_hint_y:None
+            height:300
+            allow_stretch:True
+
+        Button:
+            canvas:
+            text:'Iniciar'
+            background_color: [0, 0, 0, 0]
+            canvas.before:
+                Color:
+                    rgba:0.1,0.5,0.7,1
+                Ellipse:
+                    pos:self.pos
+                    size:self.height,self.height
+                Ellipse:
+                    pos:self.x+self.width-self.height,self.y
+                    size:self.height,self.height
+                Rectangle:
+                    pos:self.x+self.height/2.0,self.y
+                    size:self.width-self.height,self.height
+            on_release: app.root.current = 'inicio'
+        Button:
+            text:'Sair'
+            background_color: [0, 0, 0, 0]
+            canvas.before:
+                Color:
+                    rgba:0.1,0.5,0.7,1
+                Ellipse:
+                    pos:self.pos
+                    size:self.height,self.height
+                Ellipse:
+                    pos:self.x+self.width-self.height,self.y
+                    size:self.height,self.height
+                Rectangle:
+                    pos:self.x+self.height/2.0,self.y
+                    size:self.width-self.height,self.height
+
+            on_release:app.stop()
+
+<Inicio>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:50
+        BoxLayout:
+
+            padding:35
+            spacing:35
+            Button:
+                canvas.before:
+                    BorderImage:
+                        source:'Imagem/dolar.jpeg'
+                        pos: self.pos
+                        size: self.size
+
+                on_release: app.root.current = 'Dolar'
+                background_color: [0, 0, 0, 0]
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Line:
+                        rectangle: [*self.pos, *self.size]
+
+            Button:
+                canvas.before:
+                    BorderImage:
+                        source:'Imagem/euro.jpeg'
+                        pos: self.pos
+                        size: self.size
+
+                on_release: app.root.current = 'Euro'
+                background_color: [0, 0, 0, 0]
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Line:
+                        rectangle: [*self.pos, *self.size]
+
+            Button:
+                canvas.before:
+                    BorderImage:
+                        source:'Imagem/bit.jpeg'
+                        pos: self.pos
+                        size: self.size
+                on_release: app.root.current = 'Bitcoin'
+                background_color: [0, 0, 0, 0]
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Line:
+                        rectangle: [*self.pos, *self.size]
+        BoxLayout:
+            padding:35
+            spacing:35
+
+            Button:
+                canvas.before:
+                    BorderImage:
+                        source:'Imagem/iene.jpeg'
+                        pos: self.pos
+                        size: self.size
+
+                on_release: app.root.current = 'Iene'
+                background_color: [0, 0, 0, 0]
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Line:
+                        rectangle: [*self.pos, *self.size]
+            Button:
+                canvas.before:
+                    BorderImage:
+                        source:'Imagem/libra.jpeg'
+                        pos: self.pos
+                        size: self.size
+                on_release: app.root.current = 'Libra'
+                background_color: [0, 0, 0, 0]
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Line:
+                        rectangle: [*self.pos, *self.size]
+
+            Button:
+                canvas.before:
+                    BorderImage:
+                        source:'Imagem/peso.jpeg'
+                        pos: self.pos
+                        size: self.size
+                on_release: app.root.current = 'Peso'
+                background_color: [0, 0, 0, 0]
+                canvas:
+                    Color:
+                        rgba: 1, 1, 1, 1
+                    Line:
+                        rectangle: [*self.pos, *self.size]
+
+<Dolar>:
+    Label:
+        id: moedaeua
+        text: "carregando ..."
+        canvas.before:
+            BorderImage:
+                source:'Imagem/vai.jpeg'
+                pos: self.pos
+                size: self.size
+
+
+
+<Euro>
+    Label:
+        id: moedaeur
+        text: "carregando ..."
+        canvas.before:
+            BorderImage:
+                source:'Imagem/vai.jpeg'
+                pos: self.pos
+                size: self.size
+
+<Bitcoin>:
+    Label:
+        id: moedabtc
+        text: "carregando ..."
+        canvas.before:
+            BorderImage:
+                source:'Imagem/vai.jpeg'
+                pos: self.pos
+                size: self.size
+
+<Iene>:
+    Label:
+        id: moedajpy
+        text:"carregando ..."
+        canvas.before:
+            BorderImage:
+                source:'Imagem/vai.jpeg'
+                pos: self.pos
+                size: self.size
+
+<Libra>:
+    Label:
+        id: moedagbp
+        text: "carregando ..."
+        canvas.before:
+            BorderImage:
+                source:'Imagem/vai.jpeg'
+                pos: self.pos
+                size: self.size
+
+<Peso>:
+    Label:
+        id: moedaars
+        text: "carregando ..."
+        canvas.before:
+            BorderImage:
+                source:'Imagem/vai.jpeg'
+                pos: self.pos
+                size: self.size
